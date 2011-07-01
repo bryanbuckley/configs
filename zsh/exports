@@ -1,0 +1,65 @@
+######################################################################
+# Environment variables
+######################################################################
+loading environment
+
+export SHELL="/bin/zsh"
+export CC=gcc
+export COLORTERM=yes
+unset  SCREENDIR
+
+export EDITOR=="/usr/bin/nano"
+export PAGER="/bin/less"
+
+export MOZ_DISABLE_PANGO=1
+
+# colors for less without compiled termcap files (curses feature)
+export LESS_TERMCAP_mb=$'\e[01;31m'
+export LESS_TERMCAP_md=$'\e[01;31m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;44;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[01;32m'
+
+export LESS=XFraeiM # the XF is important here: don't mess with the terminal!
+export BC_ENV_ARGS=${HOME}/zsh/.bcrc # scale=4
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32' # spidergreeeeeeeen!
+
+export LANG="en_US.UTF-8"
+export LESSCHARSET="UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC="en_US.UTF-8"
+
+# IRC-Nickname and Real Name
+export IRCNICK=Buckiller
+export IRCNAME='Bryan Buckley'
+
+# Mails
+# export MAILPATH=${MAIL:-${HOME}/Mail}
+unset  MAILCHECK
+# export MAILCALL='New Mail in INBOX! '
+export REPORTTIME=${REPORTTIME:-5}
+
+# 30 directories fit on the stack, which automatically
+# each will be expanded 'cd', but only if the option
+# 'auto_cd' is set.
+#
+# Display the directories with 'd ' (aka the 'dirs-v '),
+# Change directory with 'cd + number'.
+DIRSTACKSIZE=15
+if [[ -w ${HOME}/zsh/.zsh_dirstack ]]; then
+dirstack=($PWD ${(f)"$(<${HOME}/zsh/.zsh_dirstack)"})
+chpwd() { print -l ${(Ouaf)"$(dirs -lp)"} >| ${HOME}/zsh/.zsh_dirstack }
+fi
+
+HISTFILE=${HOME}/zsh/.zsh_history   # history location
+HISTSIZE=15000
+SAVEHIST=10000                      # Max entries saved
+is_root_shell && HISTFILE=${HOME}/zsh/.zsh_history.root
+
+# Improved Command suggestion
+# %R -> Current Command,
+# %r -> Suggestion
+SPROMPT='zsh: correct '%R' to '%r' ? ([Y]es/[N]o/[E]dit/[A]bort) '

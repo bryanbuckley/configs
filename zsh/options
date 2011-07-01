@@ -1,0 +1,42 @@
+######################################################################
+# Options
+######################################################################
+loading options
+# next lets set some enviromental/shell pref stuff up
+setopt autolist 
+setopt auto_menu
+setopt autocd                  # why would you type 'cd dir' if you could just type 'dir'?
+setopt autopushd            # this makes cd=pushd
+setopt appendhistory
+unsetopt bgnice					      # do not nice bg commands
+setopt cdablevars              # avoid the need for an explicit $
+setopt completeinword          # not just at the end
+setopt correct					        # command correction
+setopt extendedglob            # weird & wacky pattern matching - yay zsh!
+setopt extendedhistory	    # puts timestamps in the history
+setopt globcomplete        # if we have a glob this will expand it
+setopt histignoredups  
+setopt histverify              # when using ! cmds, confirm first
+setopt interactivecomments     # escape commands so i can use them later
+setopt INC_APPEND_HISTORY
+setopt listpacked              # compact completion lists
+setopt longlistjobs
+setopt menucomplete
+setopt nobeep                  # i hate beeps
+setopt nocheckjobs             # don't warn me about bg processes when exiting
+setopt nohup                   # and don't kill them, either
+setopt nocaseglob            # Case insensitive globbing
+setopt nopromptcr              # don't add \r which overwrites cmd output with no \n
+setopt nomatch 
+setopt nonomatch            # do not print error on non matched patterns
+setopt notify
+setopt numericglobsort
+setopt printexitvalue          # alert me if something's failed
+setopt pushdminus
+setopt pushdsilent          # no more annoying pushd messages...
+setopt pushdignoredups         # and don't duplicate them
+setopt pushdtohome      # blank pushd goes to home
+setopt prompt_subst
+setopt recexact                # recognise exact, ambiguous matches
+setopt rmstarwait         # 10 second wait if you do something that will delete everything.  i wish i'd had this before...
+setopt sharehistory
