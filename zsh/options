@@ -38,5 +38,6 @@ setopt pushdignoredups         # and don't duplicate them
 setopt pushdtohome      # blank pushd goes to home
 setopt prompt_subst
 setopt recexact                # recognise exact, ambiguous matches
-setopt rmstarwait         # 10 second wait if you do something that will delete everything.  i wish i'd had this before...
+setopt rmstarwait         # 10 second wait if you do something that will delete everything.
 setopt sharehistory
+

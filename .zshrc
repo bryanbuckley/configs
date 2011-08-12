@@ -1,4 +1,4 @@
-#
+######################################################################
 # .zshrc is sourced in interactive shells.
 # It should contain commands to set up aliases,
 # functions, options, key bindings, etc.
@@ -16,7 +16,7 @@
 # $HOME/.zshrc of Bryan Buckley
 ######################################################################
 # some early start console routines:
-[[ ${#PATH/local} != ${#PATH} ]] && PATH=${PATH}:/usr/local/bin:/usr/local/sbin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
+[[ ${#PATH/local} != ${#PATH} ]] && PATH=${PATH}:/usr/local/bin:/usr/local/sbin
 [[ -f /tmp/.${UID}/.login ]] && { clear ; command rm /tmp/.${UID}/.login }
 
 # helper functions (will be unfunctioned later)
@@ -30,7 +30,7 @@ for i in ${ZDOTDIR}/{options,exports,aliases}; do
 done
 WORDCHARS="${WORDCHARS:s#/#}"
 WORDCHARS="${WORDCHARS:s#.#}"
-CDPATH=.:~:~/git
+CDPATH=.:..:~
 PATH=$PATH:~/bin
 ##############################################################
 

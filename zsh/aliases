@@ -4,7 +4,9 @@
 loading aliases
 
 alias ls='ls --color=auto'
+alias la='ls -A'
 alias ll='ls -lah'
+alias l='ls -CF'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'

@@ -7,8 +7,7 @@ export SHELL="/bin/zsh"
 export CC=gcc
 export COLORTERM=yes
 unset  SCREENDIR
-
-export EDITOR=="/usr/bin/nano"
+export EDITOR=="/usr/bin/gedit"
 export PAGER="/bin/less"
 
 export MOZ_DISABLE_PANGO=1
