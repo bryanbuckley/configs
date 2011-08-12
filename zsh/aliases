@@ -37,3 +37,13 @@ alias {poweroff,pow}="/bin/sync && /usr/bin/sudo poweroff"
 alias siteget="wget --recursive --page-requisites --convert-links --html-extension --no-parent --wait=10 --limit-rate=20K -U Mozilla -l" #depth, then url
 
 # database/package management:
+alias sagi='sudo apt-get install'
+
+# for work only
+alias curl='curl --proxy webproxy.ext.ti.com  !*'
+alias amake='make ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabi- -j3'
+alias gitoops='git reset --hard'
+alias gsend='git send-email --smtp-server /usr/bin/msmtp --from "Bryan Buckley <bryan.buckley@ti.com>" --envelope-sender="Bryan Buckley <bryan.buckley@ti.com>"'
+alias gbc='git branch --contains'
+alias gbac='git branch -a --contains'
+# end for work only

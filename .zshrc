@@ -304,3 +304,4 @@ print -- "$LINE1 $FILL_SPACES $SSH_P"
 }
 
 PROMPT='${PROMPT_LINE}%B%F{green}:%f%b${PR_PWDCOLOR}%~${PR_RESET}${vcs_info_msg_0_}%(!.%B%F{red}%#%f%b.%B%F{green}➤%f%b) '
+

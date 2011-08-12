@@ -12,6 +12,29 @@ export PAGER="/bin/less"
 
 export MOZ_DISABLE_PANGO=1
 
+# for work only
+export CROSS_COMPILE=arm-none-linux-gnueabi-
+export http_proxy="webproxy.ext.ti.com:80"
+export https_proxy="webproxy.ext.ti.com:80"
+export ftp_proxy="webproxy.ext.ti.com:80"
+export YOUR_PATH=~/android-rls
+export KERNELS=${YOUR_PATH}/kernels
+export MSHIELD_DK_DIR=${YOUR_PATH}/mshield/and.dal.des.ti_omap-mshield
+#export MYDROID=${YOUR_PATH}/mydroid...${MYDROID}/out/host/linux-x86/bin:
+#export JAVA_HOME=/usr/lib/jvm/java-1.5.0-sun
+#export PATH=${JAVA_HOME}:${YOUR_PATH}/u-boot/tools:${PATH}
+export PATH=$PATH:~/sdk-android-_r12-linux_x86/platform-tools:~/sdk-android-_r12-linux_x86/tools:~/opt/arm-2010q1/bin:${YOUR_PATH}/u-boot/ref_omapzoom_u-boot.git/tools:~/ARM/RVCT/Programs/4.0/400/linux-pentium
+
+#export MANIFEST=${YOUR_PATH}/my_manifest/omapmanifest
+#export device_driver_test=${YOUR_PATH}/device_driver_test
+#export KDIR=${YOUR_PATH}/kernel/omapzoom-android
+export ARMLMD_LICENSE_FILE=7555@137.167.126.87:7555@128.247.22.121:7555@10.24.134.143
+export ARM_TOOLS_ROOT_DIR=~/ARM/RVCT/Programs/4.0/400/linux-pentium
+export RVCT40BIN=~/ARM/RVCT/Programs/4.0/400/linux-pentium
+export RVCT40LIB=~/ARM/RVCT/Data/4.0/471/lib
+export RVCT40INC=~/ARM/RVCT/Data/4.0/471/include/unix
+# end for work only
+
 # colors for less without compiled termcap files (curses feature)
 export LESS_TERMCAP_mb=$'\e[01;31m'
 export LESS_TERMCAP_md=$'\e[01;31m'
@@ -62,3 +85,4 @@ is_root_shell && HISTFILE=${HOME}/zsh/.zsh_history.root
 # %R -> Current Command,
 # %r -> Suggestion
 SPROMPT='zsh: correct '%R' to '%r' ? ([Y]es/[N]o/[E]dit/[A]bort) '
+
